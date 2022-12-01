@@ -1,0 +1,8 @@
+<?xml version='1.0' ?>
+<launch>
+
+  <!-- Launches World now independently form spawning robot -->
+  <include file="$(find-pkg-share the_construct_office_gazebo)/launch/start_world_standalone.launch.py"/>
+
+
+</launch>
