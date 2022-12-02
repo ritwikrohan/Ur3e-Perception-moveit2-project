@@ -899,7 +899,7 @@
       <include>
         <uri>model://cabinet</uri>
       </include>
-      <pose>11.5 -13.5 0 0 0 1.57</pose>
+      <pose>12.2 -13.5 0 0 0 1.57</pose>
     </model>
 
     <model name="high_table">
@@ -1006,14 +1006,6 @@
       <pose>14.2 -18.2 0.5 0 0 0</pose>
     </model>
 
-    <!-- <model name="bartender_dispenser_1">
-      <static>1</static>
-      <include>
-        <uri>model://bartender_dispenser</uri>
-      </include>
-      <pose>8.593634 -10.277875 0 0 0 0</pose>
-    </model>
-
     <model name="portable_cup_2">
       <static>0</static>
       <include>
@@ -1022,14 +1014,38 @@
       <pose>8.593634 -10.277875 0.825669 0 0 0</pose>
     </model>
 
-
-    <model name="table_ingestor_1">
+    <model name="trapezium">
       <static>1</static>
       <include>
-        <uri>model://table_ingestor</uri>
+        <uri>model://trapezium</uri>
       </include>
-      <pose>10.796878 -10.290632 0 0 0 0</pose>
-    </model> -->
+      <pose>15.83 -16.95 0.2 -3.1416 0 1.57</pose>
+    </model>
+
+    <model name="charging_station_2">
+      <static>1</static>
+      <include>
+        <uri>model://charging_station_v2</uri>
+      </include>
+      <pose>15.5 -16.95 0.06 0 0 0</pose>
+    </model>
+
+    <model name="trapezium_2">
+      <static>1</static>
+      <include>
+        <uri>model://trapezium</uri>
+      </include>
+      <pose>11.5 -13.5 0.2 -3.1416 0 3.1416</pose>
+    </model>
+
+    <model name="charging_station_3">
+      <static>1</static>
+      <include>
+        <uri>model://charging_station_v2</uri>
+      </include>
+      <pose>11.5 -13.85 0.06 0 0 1.57</pose>
+    </model>
+
 
 
   </world>

@@ -21,7 +21,7 @@ def generate_launch_description():
     install_dir = get_package_prefix(description_package_name)
 
     # Add to path the models for Ingestors and Digestors
-    extra_models_package = "barista_extra_models"
+    extra_models_package = "the_construct_office_gazebo"
     extra_models_package_path = get_package_share_directory(extra_models_package)
     extra_models_path = os.path.join(extra_models_package_path, 'models')
 
