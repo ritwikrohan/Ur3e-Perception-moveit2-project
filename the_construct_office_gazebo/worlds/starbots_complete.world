@@ -794,7 +794,7 @@
       <include>
         <uri>model://charging_station_v2</uri>
       </include>
-      <pose>19.041 -13.77 0.061 0 0 1.565374</pose>
+      <pose>19.041 -13.65 0.03 0 0 1.565374</pose>
     </model>
 
     <model name="couch">
@@ -1027,7 +1027,7 @@
       <include>
         <uri>model://charging_station_v2</uri>
       </include>
-      <pose>15.5 -16.95 0.06 0 0 0</pose>
+      <pose>15.6 -16.95 0.03 0 0 0</pose>
     </model>
 
     <model name="trapezium_2">
@@ -1043,7 +1043,7 @@
       <include>
         <uri>model://charging_station_v2</uri>
       </include>
-      <pose>11.5 -13.85 0.06 0 0 1.57</pose>
+      <pose>11.5 -13.75 0.03 0 0 1.57</pose>
     </model>
 
 
