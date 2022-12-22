@@ -9,7 +9,7 @@
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
 
-      <collision name="collision">
+      <!-- <collision name="collision">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
@@ -17,7 +17,7 @@
             <scale>0.5 0.5 0.5</scale>
           </mesh>
         </geometry>
-      </collision>
+      </collision> -->
 
       <visual name="visual">
         <pose>0 0 0 0 0 0</pose>
