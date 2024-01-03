@@ -454,8 +454,8 @@ int main(int argc, char **argv) {
   auto action_client = std::make_shared<GetPoseClient>();
   double x_pose = std::numeric_limits<double>::quiet_NaN();
   double y_pose = std::numeric_limits<double>::quiet_NaN();
-  double error_x = 0.008485;
-  double error_y= -0.039633;
+  double error_x = 0.01265375;
+  double error_y= 0.00329325;
   while (!action_client->is_goal_done()) {
     rclcpp::spin_some(action_client);
   }
@@ -583,8 +583,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose;//+error_x;
-  target_pose1.position.y = y_pose;//+error_y;
+  target_pose1.position.x = x_pose+error_x;
+  target_pose1.position.y = y_pose+error_y;
   target_pose1.position.z = 0.30;
   approach_waypoints.push_back(target_pose1);
 
@@ -593,8 +593,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose;//+error_x;
-  target_pose1.position.y = y_pose;//+error_y;
+  target_pose1.position.x = x_pose+error_x;
+  target_pose1.position.y = y_pose+error_y;
   target_pose1.position.z = 0.21;
   approach_waypoints.push_back(target_pose1);
 
@@ -628,8 +628,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose;//+error_x;
-  target_pose1.position.y = y_pose;//+error_y;
+  target_pose1.position.x = x_pose+error_x;
+  target_pose1.position.y = y_pose+error_y;
   target_pose1.position.z = 0.30;
   retreat_waypoints.push_back(target_pose1);
 
@@ -638,8 +638,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose; //+error_x;
-  target_pose1.position.y = y_pose; //+error_y;
+  target_pose1.position.x = x_pose+error_x;
+  target_pose1.position.y = y_pose+error_y;
   target_pose1.position.z = 0.35;
   retreat_waypoints.push_back(target_pose1);
 
