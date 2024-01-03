@@ -106,7 +106,7 @@ public:
     //     std::bind(&BasicGraspingPerception::cloud_callback, this, _1));
     points_qos.reliable();
     cloud_sub_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-        "/camera/depth/color/points", points_qos,
+        "/wrist_rgbd_depth_sensor/points", points_qos,
         std::bind(&BasicGraspingPerception::cloud_callback, this, _1));
 
     // Setup actionlib server
