@@ -276,7 +276,7 @@ int main(int argc, char **argv) {
 
   move_group_arm.execute(trajectory_retreat);
 
-  // Place
+  
 
   RCLCPP_INFO(LOGGER, "Rotating Arm");
 
