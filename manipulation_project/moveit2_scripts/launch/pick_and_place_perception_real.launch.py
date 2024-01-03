@@ -35,6 +35,13 @@ def generate_launch_description():
         ],
     )
 
+    transform_node = Node(
+             package='tf2_ros',
+             executable='static_transform_publisher',
+            #  arguments = ['--x', '0.48', '--y', '0.68', '--z', '0.1', '--yaw', '-1.57', '--pitch', '0.174533', '--roll', '0', '--frame-id', 'base_link', '--child-frame-id', 'camera_link']
+             arguments = ['--x', '0.48', '--y', '0.60', '--z', '0.1', '--yaw', '-1.57', '--pitch', '0.174533', '--roll', '0', '--frame-id', 'base_link', '--child-frame-id', 'camera_link']
+        )
+
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -46,6 +53,7 @@ def generate_launch_description():
     return LaunchDescription(
         [moveit_cpp_node,
         perception_action_server_node,
-        rviz_node]
+        rviz_node,
+        transform_node]
     )
 

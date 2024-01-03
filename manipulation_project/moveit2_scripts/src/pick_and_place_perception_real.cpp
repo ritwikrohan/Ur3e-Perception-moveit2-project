@@ -466,21 +466,26 @@ int main(int argc, char **argv) {
     if (object.object.primitives[0].type == 1 &&
         object.object.primitives[0].dimensions[0] < 0.05 &&
         object.object.primitives[0].dimensions[1] < 0.05 &&
-        object.object.primitives[0].dimensions[2] < 0.1) {
+        object.object.primitives[0].dimensions[2] < 0.1 &&
+        object.object.primitive_poses[0].position.x < 0.35 &&
+        object.object.primitive_poses[0].position.y >0.1 ) {
     //   RCLCPP_INFO(action_client->get_logger(), "X: %f",
     //               object.object.primitive_poses[0].position.x);
     //   RCLCPP_INFO(action_client->get_logger(), "Y: %f",
     //               object.object.primitive_poses[0].position.y);
+
         RCLCPP_INFO(action_client->get_logger(), "\033[1;32mX Pose of the cube: %f\033[0m", object.object.primitive_poses[0].position.x);
         RCLCPP_INFO(action_client->get_logger(), "\033[1;32mY Pose of the cube: %f\033[0m", object.object.primitive_poses[0].position.y);
         x_pose = object.object.primitive_poses[0].position.x;
         y_pose = object.object.primitive_poses[0].position.y;
+        // RCLCPP_INFO(action_client->get_logger(), "\033[1;32mX Pose hehe of the cube: %f\033[0m", x_pose);
+        // RCLCPP_INFO(action_client->get_logger(), "\033[1;32mY Pose hehe of the cube: %f\033[0m", y_pose);
     }
-    else {
-            // Assign NaN if object dimensions condition is not met
-            x_pose = std::numeric_limits<double>::quiet_NaN();
-            y_pose = std::numeric_limits<double>::quiet_NaN();
-        }
+    // else {
+    //         // Assign NaN if object dimensions condition is not met
+    //         x_pose = std::numeric_limits<double>::quiet_NaN();
+    //         y_pose = std::numeric_limits<double>::quiet_NaN();
+    //     }
   }
 
     // Check if x_pose and y_pose are still None
@@ -578,8 +583,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose+error_x;
-  target_pose1.position.y = y_pose+error_y;
+  target_pose1.position.x = x_pose;//+error_x;
+  target_pose1.position.y = y_pose;//+error_y;
   target_pose1.position.z = 0.30;
   approach_waypoints.push_back(target_pose1);
 
@@ -588,8 +593,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose+error_x;
-  target_pose1.position.y = y_pose+error_y;
+  target_pose1.position.x = x_pose;//+error_x;
+  target_pose1.position.y = y_pose;//+error_y;
   target_pose1.position.z = 0.21;
   approach_waypoints.push_back(target_pose1);
 
@@ -623,8 +628,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose+error_x;
-  target_pose1.position.y = y_pose+error_y;
+  target_pose1.position.x = x_pose;//+error_x;
+  target_pose1.position.y = y_pose;//+error_y;
   target_pose1.position.z = 0.30;
   retreat_waypoints.push_back(target_pose1);
 
@@ -633,8 +638,8 @@ int main(int argc, char **argv) {
   target_pose1.orientation.y = -0.707;
   target_pose1.orientation.z = 0.00;
   target_pose1.orientation.w = 0.00;
-  target_pose1.position.x = x_pose+error_x;
-  target_pose1.position.y = y_pose+error_y;
+  target_pose1.position.x = x_pose; //+error_x;
+  target_pose1.position.y = y_pose; //+error_y;
   target_pose1.position.z = 0.35;
   retreat_waypoints.push_back(target_pose1);
 
